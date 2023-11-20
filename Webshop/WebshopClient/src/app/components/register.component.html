@@ -1,0 +1,32 @@
+<div class="registerForm">
+    <h1>Opret her</h1>
+        <p>Brugernavn</p>
+        <input class="form-control" type="text" name="" placeholder="Jack87" [(ngModel)]="signup.username">
+
+        <p>Email</p>
+        <input class="form-control" type="text" name="" placeholder="google@gmail.com" [(ngModel)]="signup.email">
+
+        <p>Navn</p>
+        <input class="form-control" type="text" name="" placeholder="Jack"  [(ngModel)]="signup.name">
+
+        <p>Kode</p>
+        <input class="form-control" type="password" name="" placeholder="Skriv kodeord" [(ngModel)]="signup.password">
+
+        <p>Telefon</p>
+        <input class="form-control" type="text" name="" placeholder="12345678" [(ngModel)]="signup.phoneNr"> <br>
+
+        <p>By</p>
+      <select class="form-select" [(ngModel)]="signup.zipCode" >
+        <option *ngFor="let zipcode of zipcodes" value="{{zipcode.id}}" >
+         {{zipcode.id}} {{zipcode.city}} </option>
+      </select> <br>
+
+        <p>Adresse</p>
+        <input class="form-control" type="text" name="" placeholder="vejsen veh 123F 1. th" [(ngModel)]="signup.streetName">
+
+        <p>Land</p>
+        <input class="form-control" type="text" name="" placeholder="Danmark" [(ngModel)]="signup.country">
+
+        <input class="w-100 btn btn-lg btn-primary" type="submit" name="" value="Opret" (click)="save()" routerLink="/login"> <br>
+        <a routerLink="/login">Har allerede en konto?</a>
+</div>

@@ -1,0 +1,9 @@
+<div class="loginForm">
+    <h1>Login her</h1>
+        <p>Email</p>
+        <input class="form-control" type="text" name="" placeholder="google@gmail.com" required [(ngModel)]="email">
+        <p>Password</p>
+        <input class="form-control" type="password" name="" placeholder="Skriv kodeord" required [(ngModel)]="password"> <br>
+        <input class="w-100 btn btn-lg btn-primary" type="submit" name="" value="Login" (click)="login()"> <br>
+        <a routerLink="/register">Har ikke en konto?</a>
+</div>
